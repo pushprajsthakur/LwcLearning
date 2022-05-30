@@ -2,13 +2,13 @@
     <lightning-card title="calling child method from parent">
         <div class="slds-var-m-around_medium">
            
-
-    <template for:each={sliderData} for:item="item" >
+<lightning-slider label="Volume" value={val} onchange={changeHandler}></lightning-slider>
+<!--     <template for:each={sliderData} for:item="item" >
         <lightning-slider key={item.serial} label="Volume" value={item.val} onchange={changeHandler}></lightning-slider>
 
-    </template>
+    </template> -->
 
-<div class="slds-var-m-around_medium">Sum is:{sum}</div>
+//<div class="slds-var-m-around_medium">Sum is:{sum}</div>
 
 
         </div>
