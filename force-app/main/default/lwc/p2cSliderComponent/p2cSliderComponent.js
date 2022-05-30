@@ -1,9 +1,10 @@
 import { LightningElement,api } from 'lwc';
 
 export default class P2cSliderComponent extends LightningElement {
-    sum = 0;
+    val = 0;
      changeHandler(event){
-        this.sliderData.val = event.target.value;
+         this.val = event.target.value;
+  // this.sliderData.val = event.target.value;
         // const newv = event.target.value;
         //  const newArray = { ...this.sliderData, val: newv };
         // //  const newArray = this.sliderData.forEach(array => {
@@ -12,23 +13,23 @@ export default class P2cSliderComponent extends LightningElement {
         //  sumPlease(newArray);
          
      }
-    sliderData = [
-        {
-            serial: 1,
-            val: 10
-        },
-        {
-            serial: 2,
-            val: 0
-        },
-        {
-            serial: 3,
-            val: 45
-        }
-    ];
-    sumPlease() {
-        console.log('sumPlease called');
-    }
+//     sliderData = [
+//         {
+//             serial: 1,
+//             val: 10
+//         },
+//         {
+//             serial: 2,
+//             val: 0
+//         },
+//         {
+//             serial: 3,
+//             val: 45
+//         }
+//     ];
+    //sumPlease() {
+       // console.log('sumPlease called');
+   // }
     // renderedCallback() {
     //     const newArr = this.sliderData;
     //     this.sum = newArr.reduce(function (acc, curr) {
@@ -38,9 +39,9 @@ export default class P2cSliderComponent extends LightningElement {
     //     console.log("called connected callback");
     //}
 
-    //  @api resetSlider(){
-    //      this.val = 50;
-    //  }
+    @api resetSlider(){
+        this.val = 0;
+     }
    // sumNow(event) {
         //const newval = this.sliderData.val;
         // this.sum = this.sum + this.sliderData.parseInt(newval);
