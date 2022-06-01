@@ -13,6 +13,6 @@ export default class LmsComponentX extends LightningElement {
     }
     
     handleMessage(message) {
-        this.recievedMessage = message.lmsData.value ? message.lmsData.value : "No Message Published"
+        this.recievedMessage = message.msg.value ? message.msg.value : "No Message Published"
     }
 }
